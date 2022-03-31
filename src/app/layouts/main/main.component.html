@@ -1,0 +1,84 @@
+<div class="main">
+  <div class="main__info">
+    <a href="" class="main__info__item">
+      <div class="main__info__item__container">
+        <img src="../../../assets/images/bg_2.jpg" alt="" />
+        <p class="main__info__item__title">Đặt lịch tiêm</p>
+      </div>
+    </a>
+    <a href="" class="main__info__item">
+      <div class="main__info__item__container">
+        <img src="../../../assets/images/bg_33.jpg" alt="" />
+        <p class="main__info__item__title">Tra cứu lịch sử tiêm chủng</p>
+      </div>
+    </a>
+    <a href="" class="main__info__item">
+      <div class="main__info__item__container">
+        <img src="../../../assets/images/bg_44.jpg" alt="" />
+        <p class="main__info__item__title">Bảng giá</p>
+      </div>
+    </a>
+    <a href="" class="main__info__item">
+      <div class="main__info__item__container">
+        <img src="../../../assets/images/bg_11.jpg" alt="" />
+        <p class="main__info__item__title">Hỏi đáp</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="main__service">
+    <h3 class="main__service__title">Dịch vụ tiêm chủng</h3>
+    <div class="main__service__list">
+      <a href="" class="main__service__list__item">
+        <div class="main__service__list__item__container">
+          <img src="../../../assets/images/dvu5.jpg" alt="" />
+          <p class="main__service__list__item__title">
+            Tiêm chủng theo yêu cầu
+          </p>
+        </div>
+      </a>
+      <a href="" class="main__service__list__item">
+        <div class="main__service__list__item__container">
+          <img src="../../../assets/images/dvu6.jpg" alt="" />
+          <p class="main__service__list__item__title">
+            Tiêm cho người chuẩn bị mang thai
+          </p>
+        </div>
+      </a>
+      <a href="" class="main__service__list__item">
+        <div class="main__service__list__item__container">
+          <img src="../../../assets/images/dv3-1.jpg" alt="" />
+          <p class="main__service__list__item__title">
+            Tiêm trọn gói cho người lớn
+          </p>
+        </div>
+      </a>
+      <a href="" class="main__service__list__item">
+        <div class="main__service__list__item__container">
+          <img src="../../../assets/images/dv4-1.jpg" alt="" />
+          <p class="main__service__list__item__title">
+            Tiêm trọn gói cho trẻ em
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="main__service main__product">
+    <h3 class="main__service__title">Danh mục vắc xin</h3>
+    <div class="main__service__list">
+      <a
+        href=""
+        class="main__service__list__item"
+        *ngFor="let item of vacxinList"
+      >
+        <div class="main__service__list__item__container">
+          <img src="{{ item.image }}" alt="" />
+          <p class="main__service__list__item__title">
+            {{ item.title }}
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
