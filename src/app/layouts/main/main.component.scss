@@ -1,0 +1,88 @@
+@import "../../../assets/styles/scss/index.scss";
+
+.main {
+  &__info {
+    padding: 32px 96px;
+    display: flex;
+    align-items: center;
+    &__item {
+      width: 25%;
+      padding: 0 16px;
+      &__container {
+        position: relative;
+        overflow: hidden;
+        img {
+          transition: 0.2s;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &__title {
+        position: absolute;
+        background-color: rgba($c-bay-of-many, 0.5);
+        color: $c-white;
+        padding: 8px 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  &__service {
+    padding: 0 96px;
+    margin-bottom: 32px;
+    &__title {
+      border-bottom: 1px solid $c-sliver;
+      display: block;
+      padding: 8px 0;
+      color: $c-bay-of-many;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      &__item {
+        width: 22%;
+        padding: 0 16px;
+        &__container {
+          position: relative;
+          overflow: hidden;
+        }
+
+        &__title {
+          position: absolute;
+          background-color: rgba($c-sliver, 0.5);
+          color: $c-bay-of-many;
+          padding: 8px 0;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: bolder;
+          width: 100%;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__product {
+    .main__service__list__item__title {
+      position: relative;
+      transform: none;
+      background: none;
+    }
+  }
+}

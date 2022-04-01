@@ -1,0 +1,91 @@
+<div class="header">
+  <div class="header__banner-top">
+    <img src="assets/images/virus-corona-covid-19-pc.jpg" alt="" />
+  </div>
+  <div class="header__menu-top">
+    <div class="header__menu-top__logo">
+      <img src="assets/images/logo-02.png" alt="" />
+    </div>
+    <div class="header__menu-top__list">
+      <div class="header__menu-top__list__item">
+        <img
+          src="assets/images/icon_timtrungtam.png"
+          alt=""
+          style="width: 14px"
+        />
+        <p class="header__menu-top__list__item__title">Tìm trung tâm</p>
+      </div>
+      <div class="header__menu-top__list__item">
+        <img src="assets/images/icon_dangkytiem.png" alt="" />
+        <p class="header__menu-top__list__item__title">Đăng ký tiêm</p>
+      </div>
+      <div class="header__menu-top__list__item">
+        <img src="assets/images/icon_datmua.png" alt="" />
+        <p class="header__menu-top__list__item__title">Đặt mua vắc xin</p>
+      </div>
+      <div class="header__menu-top__list__item">
+        <img src="assets/images/bg_tuvan.png" alt="" />
+        <p class="header__menu-top__list__item__title">Tư vấn</p>
+      </div>
+      <div class="header__menu-top__list__item">
+        <img style="width: 56px" src="assets/images/icon_eplus.png" alt="" />
+      </div>
+      <div class="header__menu-top__list__item">
+        <img style="width: 40px" src="assets/images/icon_nutrihome.png" />
+      </div>
+      <div class="header__menu-top__list__hot-line">
+        <h4 class="header__menu-top__list__hot-line__title">
+          Hotline: 028 7300 6595
+        </h4>
+        <p class="header__menu-top__list__hot-line__info">
+          Mở cửa 7h30 - 17h00 / T2 - CN xuyên trưa
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="header__menu-list">
+    <div class="header__menu-list__item" *ngFor="let item of menuList">
+      <a href="" class="header__menu-list__item__link">{{ item.title }}</a>
+      <div class="header__menu-list__item__dropdown">
+        <a
+          href=""
+          class="header__menu-list__item__link"
+          *ngFor="let link of item.childrens"
+          >{{ link.title }}</a
+        >
+      </div>
+    </div>
+
+    <div class="header__menu-list__search">
+      <span class="material-icons" (click)="handleShowSearchBox()">search</span>
+      <div class="header__menu-list__search__box" *ngIf="isShowSearchBox">
+        <input type="text" />
+        <span class="material-icons">search</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__slider">
+    <swiper
+      [spaceBetween]="30"
+      [loop]="true"
+      [effect]="'fade'"
+      [navigation]="true"
+      [autoplay]="true"
+    >
+      <ng-template swiperSlide *ngFor="let sliderItem of sliderList">
+        <div
+          class="header__slider__image"
+          [style.background-image]="'url(' + sliderItem + ')'"
+        ></div>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <div class="header__banner">
+    <img
+      src="../../../assets/images/dang-ky-tiem-khang-the-don-dong-desk-1.jpg"
+      alt=""
+    />
+  </div>
+</div>
