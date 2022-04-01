@@ -68,7 +68,7 @@
       &__hot-line {
         &__title {
           color: $c-flush-orange;
-          margin: 0;
+          margin: 0 !important;
           padding-bottom: 4px;
         }
 
@@ -76,7 +76,7 @@
           color: $c-bay-of-many;
           font-size: 10px;
           font-weight: bolder;
-          margin: 0;
+          margin: 0 !important;
         }
       }
     }
@@ -129,7 +129,8 @@
     }
 
     &__search {
-      display: block;
+      display: flex;
+      align-items: center;
       margin-left: auto;
       position: relative;
       z-index: 1001;
